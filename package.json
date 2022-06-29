@@ -1,0 +1,24 @@
+{
+  "name": "booking-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kardelenceltik/booking-core.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kardelenceltik/booking-core/issues"
+  },
+  "homepage": "https://github.com/kardelenceltik/booking-core#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1"
+  }
+}

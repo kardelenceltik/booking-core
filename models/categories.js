@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 const categoriesSchema = mongoose.Schema({
+  _id: {
+    type: mongoose.Types.ObjectId,
+  },
   name: {
     type: String,
   },

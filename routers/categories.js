@@ -11,6 +11,19 @@ router.get("/get-active-categories", async (req, res) => {
   }
 });
 
+router.post("/delete-category", async (req, res) => {
+  try {
+    const categoryId = req.body.id;
+    const updatedCategory = await category.findOneAndUpdate(
+      { _id: categoryId },
+      { rowStatusId: 4 }
+    );
+    res.status(200).json(updatedCategory);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
+
 router.post("/create-category", async (req, res) => {
   try {
     req.body.rowStatusId = 1;

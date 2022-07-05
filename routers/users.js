@@ -23,6 +23,9 @@ router.post("/create", async (req, res) => {
       res.statusMessage =
         "Your phone number cannot be less than 11 characters!";
       res.status(400).json();
+    } else if (!req.body.mail.includes("@")) {
+      res.statusMessage = "Mail Address must contain @";
+      res.status(400).json();
     } else if (req.body.password.length < 6) {
       res.statusMessage = "Password field cannot be less than 6 characters";
       res.status(400).json();
